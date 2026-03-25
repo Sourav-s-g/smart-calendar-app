@@ -50,6 +50,30 @@ create table events (
   created_at timestamptz default now()
 );
 
+-- logs ownership transfer
+create table calendar_ownership_history (
+    id uuid primary key default gen_random_uuid(),
+    calendar_id uuid not null,
+    old_owner uuid not null,
+    new_owner uuid not null,
+    transferred_at timestamptz default now()
+);
+
+create function log_ownership_transfer() returns trigger as $$
+begin
+    if OLD.created_by <> NEW.created_by then
+        insert into calendar_ownership_history(calendar_id, old_owner, new_owner)
+        values (OLD.id, OLD.created_by, NEW.created_by);
+    end if;
+    return NEW;
+end;
+$$ language plpgsql;
+
+create trigger trg_log_ownership_transfer
+after update of created_by on calendars
+for each row
+execute function log_ownership_transfer();
+
 
 -- to insert values from auth.user to profiles directly
 
