@@ -1,1 +1,163 @@
+# =========================
+
+# Node.js
+
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# =========================
+
+# Environment Variables
+
+# =========================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# Supabase / API keys
+
+supabase/.env
+config/.env
+.env.supabase
+
+# =========================
+
+# Logs
+
+# =========================
+
+logs
+*.log
+*.out
+*.err
+*.pid
+
+# =========================
+
+# Build / Dist folders
+
+# =========================
+
+dist/
+build/
+out/
+.next/
+.cache/
+.tmp/
+coverage/
+
+# =========================
+
+# Frontend (React / Vite / Next)
+
+# =========================
+
+node_modules/
+.vite/
+vite.config.ts.timestamp-*
+*.tsbuildinfo
+
+# =========================
+
+# MacOS
+
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+
+# Windows
+
+# =========================
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================
+
+# Linux
+
+# =========================
+
+*~
+
+# =========================
+
+# IDE / Editors
+
+# =========================
+
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# =========================
+
+# Database / Local files
+
+# =========================
+
+*.sqlite
+*.db
+*.db-journal
+
+# =========================
+
+# Uploads / user content
+
+# =========================
+
+uploads/
+public/uploads/
+tmp/uploads/
+
+# =========================
+
+# Test / coverage
+
+# =========================
+
+coverage/
+.nyc_output/
+
+# =========================
+
+# TypeScript
+
+# =========================
+
+*.tsbuildinfo
+
+# =========================
+
+# Misc
+
+# =========================
+
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+*.pdf
+
 guidelines/
