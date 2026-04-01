@@ -77,6 +77,11 @@ SUPABASE_ANON_KEY=your_supabase_anon_key
 JWT_SECRET=your_secret_key
 ```
 
+Get your JWT_SECRET via:
+```bash
+node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+```
+
 ---
 
 ### 3. Run the server
